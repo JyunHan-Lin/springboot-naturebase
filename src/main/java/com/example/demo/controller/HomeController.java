@@ -63,7 +63,7 @@ public class HomeController {
 	    model.addAttribute("discussList", discussList);
 	    model.addAttribute("behaviorCountMap", behaviorCountMap);
 	    model.addAttribute("favoriteDiscussIds", favoriteDiscussIds);
-	    return "main";
+	    return "main-page";
 	}
 	
     @GetMapping("/search")

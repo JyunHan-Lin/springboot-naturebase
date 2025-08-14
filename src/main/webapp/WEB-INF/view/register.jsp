@@ -1,33 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
 <head>
-	<meta charset="UTF-8">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="/css/basic.css">
-	<link rel="stylesheet" href="/css/common.css">
-	<link rel="stylesheet" href="/css/user.css">
-	<title>OrniBase</title>
-	<link rel="icon" type="image/png" href="/images/icon.png">
+	<%@ include file="/WEB-INF/view/common.jspf"%>
 	<script src="/js/register.js"></script>
 </head>
-<body class="fontstyle">
 
-	<%@ include file="/WEB-INF/view/menu-pre.jspf" %>
+<body class="fontstyle">
+	<%@ include file="/WEB-INF/view/navbar-logout.jspf" %>
 
 	<div class="container my-5">
 		<div class="row justify-content-center">
-			<div class="col-md-6">
+			<div class="col-md-5">
 				<div class="card shadow-sm">
 					<div class="card-header text-center">
 						<h2>會員註冊</h2>
 					</div>
+					
 					<div class="card-body">
 						<form method="POST" action="/register">
 							<div class="mb-3">
 								<label for="username" class="form-label">帳號</label>
-								<input type="text" class="form-control" id="username" name="username" placeholder="請輸入4位數以上帳號" required>
+								<input type="text" class="form-control" id="username" name="username" placeholder="請輸入4位數以上帳號名稱" required>
 							</div>
 							<div class="mb-3">
 								<label for="password" class="form-label">密碼</label>
@@ -54,7 +49,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

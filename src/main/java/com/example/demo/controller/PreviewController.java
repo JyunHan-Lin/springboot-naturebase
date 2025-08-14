@@ -20,7 +20,7 @@ import com.example.demo.service.UserService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/preview")
+@RequestMapping("/")
 public class PreviewController {
 	
 	@Autowired
@@ -44,10 +44,9 @@ public class PreviewController {
 	    
 	    Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();
 	    model.addAttribute("favoriteCountMap", favoriteCountMap);
-	    
 	    model.addAttribute("discussList", discussList);
 	    model.addAttribute("behaviorCountMap", behaviorCountMap);
-	    return "preview";
+	    return "preview-page";
 	}
 	
     @GetMapping("/search")

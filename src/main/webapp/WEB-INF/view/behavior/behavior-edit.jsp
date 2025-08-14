@@ -14,8 +14,7 @@
 	<link rel="icon" type="image/png" href="/images/icon.png">
 </head>
 <body class="fontstyle">
-
-	<%@ include file="/WEB-INF/view/menu-mini.jspf"%>
+	<%@ include file="/WEB-INF/view/navbar-login.jspf"%>
 
 	<div class="container my-5">
 		<div class="card shadow-sm">

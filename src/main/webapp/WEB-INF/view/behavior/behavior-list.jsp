@@ -23,8 +23,7 @@
 	</script>
 </head>
 <body class="fontstyle">
-	<!-- menu bar include -->
-	<%@ include file="/WEB-INF/view/menu-mini.jspf" %>	
+	<%@ include file="/WEB-INF/view/navbar-login.jspf"%>
 
 	<div class="container mt-4">
 		<button onclick="history.back()" class="btn btn-danger mb-3">回上一頁</button>

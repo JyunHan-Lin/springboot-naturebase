@@ -26,8 +26,8 @@
 		
 	</head>
 <body class="fontstyle">
-	<!-- menu bar include -->
-	<%@ include file="/WEB-INF/view/menu-mini.jspf"%>
+	<%@ include file="/WEB-INF/view/navbar-login.jspf"%>
+
 	<!-- 外層容器 -->
 	<div class="container mt-4">
   <div class="row">

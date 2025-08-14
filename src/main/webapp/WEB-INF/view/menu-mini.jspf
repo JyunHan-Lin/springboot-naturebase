@@ -2,6 +2,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<%
+    String userName = (String) session.getAttribute("userName");
+    String firstLetter = "";
+    if (userName != null && userName.length() > 0) {
+        firstLetter = userName.substring(0, 1).toUpperCase();
+    }
+%>
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fontstyle">
     <div class="container">
@@ -33,13 +41,6 @@
                    href="#" role="button" id="userDropdownMini" data-bs-toggle="dropdown" aria-expanded="false"
                    style="width: 40px; height: 40px; padding:0; text-align:center;">
                     <%= firstLetter %>
-					<%
-					    String userName = (String) session.getAttribute("userName");
-					    String firstLetter = "";
-					    if (userName != null && userName.length() > 0) {
-					        firstLetter = userName.substring(0, 1).toUpperCase();
-					    }
-					%>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownMini">
                     <li><a class="dropdown-item" href="/ornibase/member">會員資料變更</a></li>

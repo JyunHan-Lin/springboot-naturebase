@@ -63,7 +63,7 @@ public class DiscussController {
 	    model.addAttribute("favoriteDiscussList", discussService.getMyFavoritePublicDiscuss(userId));
 	    model.addAttribute("behaviorCountMap", behaviorCountMap);
 
-	    return "discuss/discuss-list";
+	    return "discuss/discuss-mylist";
 	}
 	
 	// 建立筆記本的頁面

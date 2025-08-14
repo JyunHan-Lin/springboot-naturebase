@@ -17,9 +17,7 @@
     <link rel="stylesheet" href="/css/form.css">
 </head>
 <body class="fontstyle">
-
-    <!-- menu bar include -->
-    <%@ include file="/WEB-INF/view/menu-mini.jspf" %>
+	<%@ include file="/WEB-INF/view/navbar-login.jspf"%>
 
     <div class="container my-4">
         <!-- 討論表單 -->

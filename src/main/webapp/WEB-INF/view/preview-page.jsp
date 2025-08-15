@@ -6,9 +6,9 @@
 <head>
 	<%@ include file="/WEB-INF/view/common.jspf"%>
 	<script>
-		window.notLoggedIn = ${empty userCert};
+		window.notLoggedIn = ${empty userCert ? true : false };
 	</script>
-	<script src="/js/preview.js"></script>
+	<script src="/js/preview.js" defer></script>
 </head>
 
 <body class="fontstyle">

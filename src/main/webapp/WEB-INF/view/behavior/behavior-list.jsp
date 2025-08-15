@@ -5,11 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>OrniBase - 行為紀錄</title>
-	<link rel="icon" type="image/png" href="/images/icon.png">
-	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<%@ include file="/WEB-INF/view/common.jspf"%>
 	<!-- DataTables CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 	<!-- jQuery & DataTables JS -->

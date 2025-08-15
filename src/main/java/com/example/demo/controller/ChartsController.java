@@ -137,14 +137,6 @@ public class ChartsController {
 	        result.put("comment", comment);
 	        return result;
 	    }
-	    
-	    @GetMapping("/chart-food-count")
-	    @ResponseBody
-	    public Map<String, Long> getFoodCountChartData(@RequestParam Integer discussId) {
-	        return behaviorService.getFoodCountInLastMonth(discussId);
-	    }
-
-
 }
 
 

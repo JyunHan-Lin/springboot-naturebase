@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions"%>
+
+<div class="col-md-12">
+	<div class="card shadow-sm mb-3">
+		<div class="card-header">
+			<h5 class="mb-0">留言板</h5>
+		</div>
+
+		<div class="card-body">
+			<c:forEach var="comment" items="${comments}" varStatus="status">
+				<c:if test="${status.index <= 4 }">
+					<div class="mb-3">
+						<div class="d-flex align-items-center mb-1">
+							<div
+								class="rounded-circle bg-secondary text-white text-center me-2"
+								style="width: 32px; 
+									   height: 32px; 
+									   line-height: 32px; 
+									   font-weight: bold;">
+								${fn:substring(comment.userName, 0, 1).toUpperCase()}
+							</div>
+							<strong>${comment.userName}</strong> 
+							<small class="text-muted ms-auto">${comment.formattedCreatedTime}</small>
+						</div>
+						<p>${comment.content}</p>
+						<div class="mb-2">
+							<button type="button" class="btn btn-sm btn-outline-success me-1">
+								👍
+							</button>
+							<button type="button" class="btn btn-sm btn-outline-danger">
+								👎
+							</button>
+						</div>
+						<form method="post" action="/your-reply-url" class="mb-3">
+							<textarea class="form-control mb-1"
+								placeholder="回覆 ${comment.userName} ..." rows="1" required></textarea>
+							<button type="submit" class="btn btn-primary btn-sm">送出回覆</button>
+						</form>
+						<hr />
+					</div>
+				</c:if>
+			</c:forEach>
+			<form method="post"
+				action="/ornibase/discuss/${discussDTO.discussId}/comment">
+				<textarea name="content" class="form-control mb-2" rows="3"
+					maxlength="100" placeholder="撰寫新留言..." required></textarea>
+				<button type="submit" class="btn btn-success">送出留言</button>
+			</form>
+			<!-- 分頁按鈕：當留言數 > 8 時才顯示 -->
+			<c:if test="${fn:length(comments) > 4}">
+				<div class="card-footer">
+					<nav>
+						<ul class="pagination mb-0">
+							<li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+							<li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+							<!-- 這裡可以用迴圈動態產生頁碼 -->
+						</ul>
+					</nav>
+				</div>
+			</c:if>
+		</div>
+	</div>
+</div>
+

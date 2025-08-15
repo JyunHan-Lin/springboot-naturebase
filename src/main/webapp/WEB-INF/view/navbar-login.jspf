@@ -15,12 +15,20 @@
             <img src="/images/logo-white.png" height="40" alt="Logo">
         </a>
 
+        <!-- 漢堡選單按鈕（手機版） -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <!-- 導覽連結 -->
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link emphasis" href="/ornibase/discuss/new">建立群組</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link emphasis" href="/ornibase/manager">用戶管理</a>
                 </li>
             </ul>
 
@@ -37,11 +45,6 @@
                     <li><a class="dropdown-item" href="/ornibase/logout">登出</a></li>
                 </ul>
 
-		        <!-- 漢堡選單按鈕（手機版） -->
-		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-		            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-		            <span class="navbar-toggler-icon"></span>
-		        </button>
 	        
             </div>
         </div>

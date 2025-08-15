@@ -5,11 +5,7 @@
 <html>
 <head>
 	<%@ include file="/WEB-INF/view/common.jspf"%>
-	<script>
-        document.querySelector("img[title='驗證碼']").addEventListener("click", function() {
-            this.src = "/user/authcode?" + new Date().getTime(); // 防止快取
-        });
-    </script>
+   	<script src="/js/authcode.js" defer></script>
 </head>
 
 <body class="fontstyle">
@@ -49,7 +45,7 @@
 								    <label for="authcode" class="form-label mb-0" style="min-width: 70px;">驗證碼</label>
 								    <div class="d-flex align-items-center col">
 									    <input type="text" id="authcode" name="authcode" class="form-control" placeholder="請輸入驗證碼" required style="max-width: 150px;">
-									    <img src="/user/authcode" title="驗證碼" alt="驗證碼" class="border rounded" style="cursor: pointer; height: 38px; user-select:none;">
+									    <img src="/user/authcode" title="驗證碼" alt="驗證碼" class="border rounded mx-2" style="cursor: pointer; height: 38px; user-select:none;">
 								    </div>
 								</div>
 

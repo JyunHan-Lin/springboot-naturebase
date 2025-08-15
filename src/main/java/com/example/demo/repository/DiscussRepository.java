@@ -13,13 +13,12 @@ import com.example.demo.model.entity.Discuss;
 public interface DiscussRepository extends JpaRepository<Discuss, Integer>{
 	
 	@Query("SELECT d FROM Discuss d JOIN FETCH d.user WHERE d.discussId = :discussId")
-	Optional<Discuss> findByDiscussIdWithUser(Integer discussId);
+	public Optional<Discuss> findByDiscussIdWithUser(Integer discussId);
 
-	List<Discuss> findByUser_UserId(Integer userId); // JPA 是用資料庫名稱建立方法
-	List<Discuss> findByIsPublicTrue();
+	public List<Discuss> findByUser_UserId(Integer userId); // JPA 是用資料庫名稱建立方法
+	public List<Discuss> findByIsPublicTrue();
 	// 搜尋
-	List<Discuss> findByIsPublicTrueAndTitleContainingIgnoreCaseOrIsPublicTrueAndDescriptionContainingIgnoreCaseOrIsPublicTrueAndTagIgnoreCase(
-    
+	public List<Discuss> findByIsPublicTrueAndTitleContainingIgnoreCaseOrIsPublicTrueAndDescriptionContainingIgnoreCaseOrIsPublicTrueAndTagIgnoreCase(
 	String titleKeyword, String descriptionKeyword, String tagKeyword);
 
 }

@@ -9,7 +9,7 @@ import com.example.demo.model.entity.Discuss;
 
 public interface CommentRepository extends JpaRepository<Comment, Integer> {
 
-	List<Comment>findByDiscussOrderByCreatedTimeAsc(Discuss discuss);
-	void deleteByDiscuss_DiscussId(Integer discussId);
+	public List<Comment>findByDiscussOrderByCreatedTimeAsc(Discuss discuss);
+	public void deleteByDiscuss_DiscussId(Integer discussId);
 
 }

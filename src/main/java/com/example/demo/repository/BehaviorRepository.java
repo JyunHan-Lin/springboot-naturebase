@@ -15,20 +15,20 @@ import com.example.demo.model.entity.Discuss;
 @Repository
 public interface BehaviorRepository extends JpaRepository<Behavior, Integer>{
     
-	List<Behavior> findByDiscuss_DiscussId(Integer discussId);
+	public List<Behavior> findByDiscuss_DiscussId(Integer discussId);
     
 	@Query("SELECT b FROM Behavior b LEFT JOIN FETCH b.user WHERE b.discuss.discussId = :discussId")
-	List<Behavior> findByDiscuss_DiscussIdFetchUser(@Param("discussId") Integer discussId);
+	public List<Behavior> findByDiscuss_DiscussIdFetchUser(@Param("discussId") Integer discussId);
 
 	// 查詢 userId 和 discussId 的行為
     @Query("SELECT b FROM Behavior b WHERE b.discuss.id = :discussId AND b.discuss.user.id = :userId")
-    List<Behavior> findByDiscussIdAndUserId(@Param("discussId") Integer discussId, @Param("userId") Integer userId);
+    public List<Behavior> findByDiscussIdAndUserId(@Param("discussId") Integer discussId, @Param("userId") Integer userId);
 
-	List<Behavior> findByDate(LocalDate date);
+    public List<Behavior> findByDate(LocalDate date);
 
-	void deleteByDiscuss_DiscussId(Integer discussId);
+    public void deleteByDiscuss_DiscussId(Integer discussId);
 
-	int countByDiscuss_DiscussId(Integer discussId);
+    public int countByDiscuss_DiscussId(Integer discussId);
 
-	List<Behavior> findByDiscuss_DiscussIdAndDateAfter(Integer discussId, LocalDate date);
+    public List<Behavior> findByDiscuss_DiscussIdAndDateAfter(Integer discussId, LocalDate date);
 }

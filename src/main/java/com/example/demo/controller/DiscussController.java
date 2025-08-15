@@ -58,7 +58,6 @@ public class DiscussController {
 	    
 	    Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();
 	    model.addAttribute("favoriteCountMap", favoriteCountMap);
-	    
 	    model.addAttribute("myDiscussList", discussService.getMyPrivateDiscuss(userId));
 	    model.addAttribute("favoriteDiscussList", discussService.getMyFavoritePublicDiscuss(userId));
 	    model.addAttribute("behaviorCountMap", behaviorCountMap);

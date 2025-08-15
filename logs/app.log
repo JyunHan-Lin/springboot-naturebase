@@ -3184,3 +3184,51 @@ java.lang.RuntimeException: 留言內容不得為空
 2025-08-15T15:11:32.635+08:00  INFO 8900 --- [springboot-naturebase] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-15T15:11:32.637+08:00  INFO 8900 --- [springboot-naturebase] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-08-15T15:11:32.648+08:00  INFO 8900 --- [springboot-naturebase] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-15T15:11:34.119+08:00  INFO 66032 --- [springboot-naturebase] [main] c.e.d.SpringbootNaturebaseApplication    : Starting SpringbootNaturebaseApplication using Java 21.0.6 with PID 66032 (D:\Program Files\WorkBench\springboot-naturebase\target\classes started by user in D:\Program Files\WorkBench\springboot-naturebase)
+2025-08-15T15:11:34.121+08:00  INFO 66032 --- [springboot-naturebase] [main] c.e.d.SpringbootNaturebaseApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-08-15T15:11:34.654+08:00  INFO 66032 --- [springboot-naturebase] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-15T15:11:34.655+08:00  INFO 66032 --- [springboot-naturebase] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-08-15T15:11:34.690+08:00  INFO 66032 --- [springboot-naturebase] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.BehaviorRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-08-15T15:11:34.692+08:00  INFO 66032 --- [springboot-naturebase] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-08-15T15:11:34.694+08:00  INFO 66032 --- [springboot-naturebase] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.DiscussRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-08-15T15:11:34.696+08:00  INFO 66032 --- [springboot-naturebase] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.FavoriteRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-08-15T15:11:34.698+08:00  INFO 66032 --- [springboot-naturebase] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-08-15T15:11:34.698+08:00  INFO 66032 --- [springboot-naturebase] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 0 JDBC repository interfaces.
+2025-08-15T15:11:34.706+08:00  INFO 66032 --- [springboot-naturebase] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-15T15:11:34.707+08:00  INFO 66032 --- [springboot-naturebase] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-15T15:11:34.739+08:00  INFO 66032 --- [springboot-naturebase] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 5 JPA repository interfaces.
+2025-08-15T15:11:35.109+08:00  INFO 66032 --- [springboot-naturebase] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2025-08-15T15:11:35.120+08:00  INFO 66032 --- [springboot-naturebase] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-15T15:11:35.121+08:00  INFO 66032 --- [springboot-naturebase] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-15T15:11:35.290+08:00  INFO 66032 --- [springboot-naturebase] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-08-15T15:11:35.295+08:00  INFO 66032 --- [springboot-naturebase] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-15T15:11:35.296+08:00  INFO 66032 --- [springboot-naturebase] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1137 ms
+2025-08-15T15:11:35.415+08:00  INFO 66032 --- [springboot-naturebase] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-15T15:11:35.449+08:00  INFO 66032 --- [springboot-naturebase] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-15T15:11:35.489+08:00  INFO 66032 --- [springboot-naturebase] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-15T15:11:35.681+08:00  INFO 66032 --- [springboot-naturebase] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-15T15:11:35.702+08:00  INFO 66032 --- [springboot-naturebase] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-15T15:11:35.830+08:00  INFO 66032 --- [springboot-naturebase] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e4b54d3
+2025-08-15T15:11:35.831+08:00  INFO 66032 --- [springboot-naturebase] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-15T15:11:35.903+08:00  INFO 66032 --- [springboot-naturebase] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-15T15:11:36.702+08:00  INFO 66032 --- [springboot-naturebase] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-15T15:11:36.768+08:00  INFO 66032 --- [springboot-naturebase] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15T15:11:36.979+08:00  INFO 66032 --- [springboot-naturebase] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-15T15:11:37.794+08:00  INFO 66032 --- [springboot-naturebase] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2025-08-15T15:11:37.798+08:00  INFO 66032 --- [springboot-naturebase] [main] c.e.d.SpringbootNaturebaseApplication    : Started SpringbootNaturebaseApplication in 4.013 seconds (process running for 4.475)
+2025-08-15T15:11:38.990+08:00  INFO 66032 --- [springboot-naturebase] [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-15T15:11:38.990+08:00  INFO 66032 --- [springboot-naturebase] [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-15T15:11:38.991+08:00  INFO 66032 --- [springboot-naturebase] [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-15T15:19:08.044+08:00  INFO 66032 --- [springboot-naturebase] [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-08-15T15:19:08.047+08:00  INFO 66032 --- [springboot-naturebase] [RMI TCP Connection(16)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-15T15:19:08.060+08:00  INFO 66032 --- [springboot-naturebase] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-15T15:19:08.065+08:00  INFO 66032 --- [springboot-naturebase] [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15T15:19:08.068+08:00  INFO 66032 --- [springboot-naturebase] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-15T15:19:08.086+08:00  INFO 66032 --- [springboot-naturebase] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

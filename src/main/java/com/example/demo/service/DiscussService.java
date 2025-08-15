@@ -18,15 +18,15 @@ public interface DiscussService {
 	public void updateDiscuss(Integer discussId, Integer userId, DiscussDTO discussDTO);
 	public void updateDiscuss(Integer discussId, String title, String description, String tag, String youtubeVideoId, Boolean isPublic, LocalDateTime createdTime, Integer userId, String creatorName);
 	public void deleteDiscuss(Integer discussId, Integer userId, DiscussDTO discussDTO);
-	boolean hasUserFavorited(Integer userId, Integer discussId);
-	void addFavorite(Integer userId, Integer discussId);
+	public boolean hasUserFavorited(Integer userId, Integer discussId);
+	public void addFavorite(Integer userId, Integer discussId);
 	// 取得所有公開討論串
-	List<DiscussDTO> getPublicDiscussList();
+	public List<DiscussDTO> getPublicDiscussList();
 	// 取得未公開(私人)討論串
-	List<DiscussDTO> getMyPrivateDiscuss(Integer userId);
+	public List<DiscussDTO> getMyPrivateDiscuss(Integer userId);
 	// 取得收藏的公開討論串
-	List<DiscussDTO> getMyFavoritePublicDiscuss(Integer userId);
-	List<DiscussDTO> searchDiscusses(String keyword);
-	void removeFavorite(Integer userId, Integer discussId);
-	Map<Integer, Integer> getFavoriteCountMap();
+	public List<DiscussDTO> getMyFavoritePublicDiscuss(Integer userId);
+	public List<DiscussDTO> searchDiscusses(String keyword);
+	public void removeFavorite(Integer userId, Integer discussId);
+	public Map<Integer, Integer> getFavoriteCountMap();
 }

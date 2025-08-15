@@ -33,7 +33,7 @@ public class HomeController {
 	
 	@GetMapping
 	public String mainPage(Model model, HttpSession session) {
-		// 看得到大家建立的記錄本
+		// 看得到大家建立的記錄本 + 熱門討論串(最近5天文章數或記錄數>10則的，沒有的話顯示最多文章術或記錄數)
 	    // 取得公開的討論串列表
 	    List<DiscussDTO> discussList = discussService.getPublicDiscussList();
 	    

@@ -65,7 +65,7 @@
 											<span class="text-muted mt-auto" style="font-size: 0.875rem" >
 													分類： 
 													建立者： 
-													文章：
+													留言：
 													紀錄：${behaviorCountMap[discussDTO.discussId]} 
 													人數：${favoriteCountMap[discussDTO.discussId]}
 											</span>

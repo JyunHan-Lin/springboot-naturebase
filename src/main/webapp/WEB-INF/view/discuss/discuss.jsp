@@ -11,6 +11,9 @@
 	<script src="/js/charts.js" defer></script>
 	<script src="/js/ajax.js"></script>
 	<script src="/js/discuss-delete.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+	<script src="/js/chat.js"></script>
 </head>
 
 <body class="fontstyle">
@@ -44,7 +47,7 @@
 										<a href="/ornibase/discuss/update/${discussDTO.discussId}" class="btn btn-warning mx-1">編輯</a>
 										<form 
 											method="post"
-											action="/ornibase/discuss/delete/${discussDTO.discussId}"
+											action="/naturebase/discuss/delete/${discussDTO.discussId}"
 											class="d-inline">
 											<input type="hidden" name="_method" value="DELETE" />
 											<button type="submit" class="btn btn-danger" onclick="return confirmDelete();">刪除</button>
@@ -52,13 +55,13 @@
 									</c:when>
 									<c:when test="${privilegeLevel == 2}">
 										<form method="post"
-											action="/ornibase/discuss/favorite/${discussDTO.discussId}/delete">
+											action="/naturebase/discuss/favorite/${discussDTO.discussId}/delete">
 											<button type="submit" class="btn btn-danger">取消追蹤</button>
 										</form>
 									</c:when>
 									<c:otherwise>
 										<p>若想記錄行為或留言，請先追蹤</p>
-										<form method="post" action="/ornibase/discuss/favorite/${discussDTO.discussId}">
+										<form method="post" action="/naturebase/discuss/favorite/${discussDTO.discussId}">
 											<button type="submit" class="btn btn-danger">追蹤</button>
 										</form>
 									</c:otherwise>

@@ -20,15 +20,14 @@ public class CertServiceImpl implements CertService{
 	private UserRepository userRepository;
 
 	@Override
-	//public UserCert getCert(String username, String password) throws CertException {
-	public UserCert getCert(String username, String password, String authCode, String sessionAuthCode) throws UserNotFoundException, PasswordInvalidException {
+	public UserCert getCert(String userName, String password, String authCode, String sessionAuthCode) throws UserNotFoundException, PasswordInvalidException {
 		// 1. 比對驗證碼
 		if(!authCode.equals(sessionAuthCode)) {
 			throw new CertException("驗證碼不符");
 		}
 		
 		// 2. 是否有此人
-		User user = userRepository.getUser(username);
+		User user = userRepository.getUser(userName);
 		if(user == null) {
 			throw new UserNotFoundException("查無此人");
 		}
@@ -45,7 +44,7 @@ public class CertServiceImpl implements CertService{
 	    }
 	    
 		// 5. 簽發憑證
-		UserCert userCert = new UserCert(user.getUserId(), user.getUsername(), user.getRole());
+		UserCert userCert = new UserCert(user.getId(), user.getUserName(), user.getRole());
 		return userCert;
 	}
 }

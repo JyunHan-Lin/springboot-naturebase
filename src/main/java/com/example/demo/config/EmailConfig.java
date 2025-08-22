@@ -5,20 +5,20 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 /**	用來讀取 application.properties 的 email 帳號密碼設定如下:
- * 	spring.mail.username=你的Gmail帳號
- * 	spring.mail.password=你的Gmail應用程式密碼
+ * 	spring.mail.username=你的G mail帳號
+ * 	spring.mail.password=你的G mail應用程式密碼
  **/ 
 public class EmailConfig {
-	// 從 application.properties 中讀取 key 為 spring.mail.username 的值，存進 username 欄位
+	// 從 application.properties 中讀取 key 為 spring.mail.userName 的值，存進 username 欄位
     @Value("${spring.mail.username}")
-    private String username;
+    private String userName;
 
     @Value("${spring.mail.password}")
     private String password;
 
     // 提供 getter 給外部呼叫
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
     public String getPassword() {

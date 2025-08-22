@@ -10,13 +10,10 @@ import com.example.demo.model.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer>{
-	// T-SQL, 注意:欄位名要符合資料表中的設定
-	@Query(value = "select user_id, username, password_hash, salt, email, active, role from users where username=:username", nativeQuery = true)
-	public User getUser(String username); // 也可以用 findByUserName (有 3 種寫法, 寫其中一種就好)
-
-	public boolean existsByUsername(String username);
-	
-	public Optional<User> findByUsername(String username);
-	
+	// 欄位名要符合資料表中的設定
+	@Query(value = "select id, user_name, password_hash, salt, email, active, role from users where user_name=:userName", nativeQuery = true)
+	public User getUser(String userName);
+	public boolean existsByUserName(String userName);
+	public Optional<User> findByUserName(String userName);
 	public Optional<User> findByEmail(String email);
 }

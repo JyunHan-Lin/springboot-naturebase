@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <p class="card-text text-danger">${message}</p>
                         <p class="card-text"><%= exception %></p>
-                        <a href="/ornibase" class="btn btn-primary mt-3">回到首頁</a>
+                        <a href="/naturebase" class="btn btn-primary mt-3">回到首頁</a>
                     </div>
                 </div>
             </div>

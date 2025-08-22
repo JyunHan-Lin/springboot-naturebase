@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BehaviorDTO {
-	private Integer behaviorId;
+	private Integer id;
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;

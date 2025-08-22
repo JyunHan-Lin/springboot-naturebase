@@ -37,7 +37,7 @@ public class Behavior {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // 自動生成 id
 	@Column(name = "behavior_id")
-	private Integer behaviorId;
+	private Integer id;
 	
 	@Column(name = "date", nullable = false)
     private LocalDate date;

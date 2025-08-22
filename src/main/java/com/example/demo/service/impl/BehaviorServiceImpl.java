@@ -70,11 +70,11 @@ public class BehaviorServiceImpl implements BehaviorService{
 	// 查詢userId、disscussId 建立的行為(只看得到自己建立的行為)
 	@Override
 	public List<BehaviorDTO> getBehaviorByDiscussId(Integer discussId) {
-        return behaviorRepository.findByDiscuss_DiscussIdFetchUser(discussId)
+        return behaviorRepository.findByDiscuss_IdFetchUser(discussId)
                                  .stream()
                                  .map(b -> {
                                      BehaviorDTO dto = behaviorMapper.toDTO(b);
-                                     dto.setCreatorName(b.getUser() != null ? b.getUser().getUsername() : null);
+                                     dto.setCreatorName(b.getUser() != null ? b.getUser().getUserName() : null);
                                      return dto;
                                  })
                                  .toList();
@@ -93,7 +93,7 @@ public class BehaviorServiceImpl implements BehaviorService{
 		Behavior behavior = behaviorRepository.findById(behaviorId)
 				.orElseThrow(() -> new BehaviorNotFoundException("修改失敗: 行為不存在"));
 		// 權限驗證: 只能改自己建立的行為
-		if (!behavior.getUser().getUserId().equals(behaviorDTO.getUserId())) {
+		if (!behavior.getUser().getId().equals(behaviorDTO.getUserId())) {
 			throw new BehaviorException("不可編輯其他使用者記錄的行為");
 		}
 
@@ -115,7 +115,7 @@ public class BehaviorServiceImpl implements BehaviorService{
 	    Behavior behavior = behaviorRepository.findById(behaviorId)
 	            .orElseThrow(() -> new BehaviorNotFoundException("刪除失敗: 行為" + behaviorId + "不存在"));
 
-        if (!behavior.getUser().getUserId().equals(currentUserId)) {
+        if (!behavior.getUser().getId().equals(currentUserId)) {
             throw new RuntimeException("不可刪除其他使用者記錄的行為");
         }
 		behaviorRepository.deleteById(behaviorId);
@@ -137,12 +137,12 @@ public class BehaviorServiceImpl implements BehaviorService{
 
 	@Override
 	public int countByDiscussId(Integer discussId) {
-	    return behaviorRepository.countByDiscuss_DiscussId(discussId);
+	    return behaviorRepository.countByDiscuss_Id(discussId);
 	}
 
 	@Override
 	public List<BehaviorDTO> getBehaviorByDiscussIdAndDate(Integer discussId, LocalDate date) {
-	    List<Behavior> list = behaviorRepository.findByDiscuss_DiscussId(discussId)
+	    List<Behavior> list = behaviorRepository.findByDiscuss_Id(discussId)
 	    		   .stream()
 	               .filter(b -> b.getDate() != null && b.getDate().equals(date))
 	               .collect(Collectors.toList());
@@ -157,7 +157,7 @@ public class BehaviorServiceImpl implements BehaviorService{
 	    LocalDate oneMonthAgo = LocalDate.now().minusMonths(1);
 
 	    List<Behavior> recentBehaviors = behaviorRepository
-	        .findByDiscuss_DiscussIdAndDateAfter(discussId, oneMonthAgo);
+	        .findByDiscuss_IdAndDateAfter(discussId, oneMonthAgo);
 
 	    return recentBehaviors.stream()
 	        .filter(b -> b.getFood() != null && !b.getFood().isBlank())

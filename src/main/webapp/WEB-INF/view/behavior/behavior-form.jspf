@@ -132,40 +132,26 @@
 			<h2 class="h5 mb-0">聊天室</h2>
 		</div>
 		<div class="card-body">
-
-			<div class="comment-list overflow-auto" style="max-height: 500px;">
-				<c:forEach var="comment" items="${comments}">
-					<div class="d-flex mb-3">
-						<div class="flex-shrink-0 me-2">
-							<div class="rounded-circle bg-primary text-white text-center"
-								style="width: 40px; height: 40px; line-height: 40px;">
-								${fn:substring(comment.userName,0,1)}</div>
-						</div>
-						<div class="flex-grow-1">
-							<strong>${comment.userName}</strong>
-							<p class="mb-0">${comment.content}</p>
-							<small class="text-muted">${comment.formattedCreatedTime}</small>
-						</div>
-					</div>
-				</c:forEach>
+			<!-- 訊息顯示區 -->
+			<div id="chatMessages" class="comment-list overflow-auto"
+				style="max-height: 500px;">
+				<!-- 新訊息由 JS 動態加到這裡 -->
 			</div>
 
 			<!-- 留言輸入區 -->
 			<c:if test="${privilegeLevel >= 2}">
-				<form id="commentForm" method="post"
-					action="/ornibase/discuss/${discussDTO.discussId}/comment">
-					<div class="mb-2">
-						<textarea name="content" class="form-control" maxlength="100"
-							placeholder="輸入留言內容（最多100字）" required></textarea>
-					</div>
-					<button type="submit" class="btn btn-danger">送出留言</button>
-				</form>
+				<div class="mb-2">
+					<input type="text" id="chatUserName" class="form-control mb-2"
+						placeholder="您的名稱" value="${sessionScope.userName}" />
+					<textarea id="chatContent" class="form-control" maxlength="100"
+						placeholder="輸入留言內容（最多100字）" rows="3"></textarea>
+				</div>
+				<button id="sendBtn" class="btn btn-danger">送出留言</button>
 			</c:if>
 
 			<c:if test="${privilegeLevel < 2}">
 				<p class="text-muted">收藏後才能留言喔！</p>
 			</c:if>
-
 		</div>
 	</div>
 
@@ -191,6 +177,7 @@
 				</div>
 			</c:forEach>
 		</div>
-	</div>
-	
+	</div>	
+</div>
+
 </div>

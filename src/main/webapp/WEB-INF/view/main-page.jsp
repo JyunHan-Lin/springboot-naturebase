@@ -48,7 +48,7 @@
 						<c:choose>
 							<c:when test="${not empty discussList}">
 								<c:forEach var="discussDTO" items="${discussList}">
-									<a href="/ornibase/discuss/${discussDTO.discussId}" 
+									<a href="/naturebase/discuss/${discussDTO.discussId}" 
 									   class="list-group-item list-group-item-action mb-1 p-2 d-flex align-items-center"> 
 										
 										<!-- 討論串左側圖片區 -->
@@ -83,7 +83,7 @@
 			<!-- 右側分區 -->
 			<div class="col-md-4">
 			    <!-- 搜尋 -->
-			    <form class="d-flex mb-2" method="get" action="/ornibase/search">
+			    <form class="d-flex mb-2" method="get" action="/naturebase/search">
                		<input type="text" name="keyword" class="form-control me-2" placeholder="輸入關鍵字...">
                		<button type="submit" class="btn btn-primary">
 						<i class="fa-solid fa-magnifying-glass"></i>
@@ -99,7 +99,7 @@
 							<ul class="list-unstyled mb-0">
 								<!-- 
 		 		                <c:forEach var="board" items="${recentBoards}">
-				                    <div><a href="/ornibase/board/${board.id}">${board.name}</a></div>
+				                    <div><a href="/naturebase/board/${board.id}">${board.name}</a></div>
 				                </c:forEach>
 		 						-->
 								<li key={idx} class="py-2 border-bottom"><a
@@ -118,7 +118,7 @@
 							<ul class="list-unstyled mb-0">
 								<!-- 
 					                <c:forEach var="board" items="${newBoards}">
-					                    <div><a href="/ornibase/board/${board.id}">${board.name}</a></div>
+					                    <div><a href="/naturebase/board/${board.id}">${board.name}</a></div>
 					                </c:forEach>
 			 					-->
  								<li key={idx} class="py-2 border-bottom"><a

@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.exception.PasswordInvalidException;
 import com.example.demo.exception.UserAlreadyExistException;
-import com.example.demo.exception.UserNotFoundException;
-import com.example.demo.mapper.UserMapper;
-import com.example.demo.model.dto.UserDTO;
 import com.example.demo.model.entity.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
@@ -20,16 +18,12 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserRepository userRepository;
-	
-	@Autowired
-	private UserMapper userMapper;
 
-	// 註冊
-	// 參數待改 ?
+	// 註冊( 新增使用者 )
 	@Override
-	public boolean addUser(String username, String password, String confirmPassword, String email, Boolean active, String role){
+	public boolean addUser(String userName, String password, String confirmPassword, String email, Boolean active, String role){
 	    // 判斷使用者是否已存在
-	    if (userRepository.existsByUsername(username)) {
+	    if (userRepository.existsByUserName(userName)) {
 	    	throw new UserAlreadyExistException("使用者註冊過了");
 	    }
 	    if (!password.equals(confirmPassword)) {
@@ -41,7 +35,7 @@ public class UserServiceImpl implements UserService {
 		// 加鹽加密
 		String passwordHash = HashUtil.getHash(password, salt);
 		// 建立user物件
-		User user = new User(null, username, passwordHash, salt, email, active, role, null);
+		User user = new User(null, userName, passwordHash, salt, email, active, role, null);
 		// 儲存到資料庫
 		userRepository.save(user);
 		System.out.println("使用者註冊成功");
@@ -49,13 +43,12 @@ public class UserServiceImpl implements UserService {
 		
 	}
 	
-	// email認證
-	public boolean confirmEmail(String username) {
-	    Optional<User> optUser = userRepository.findByUsername(username);
+	// Email認證
+	public boolean confirmEmail(String userName) {
+	    Optional<User> optUser = userRepository.findByUserName(userName);
 	    
 	    if (optUser.isPresent()) {
 	        User user = optUser.get();
-	        // 假設 User 類別有一個表示認證狀態的欄位，例如 active
 	        user.setActive(true);  // 將認證狀態設為 true (已認證)
 	        userRepository.save(user); // 儲存更新後的使用者
 	        return true; // 成功
@@ -65,8 +58,8 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	// 變更密碼
-	public boolean changePassword(String username, String oldPassword, String newPassword, String confirmPassword) {
-        Optional<User> optUser = userRepository.findByUsername(username);
+	public boolean changePassword(String userName, String oldPassword, String newPassword, String confirmPassword) {
+        Optional<User> optUser = userRepository.findByUserName(userName);
         if (optUser.isEmpty()) 
         	return false; // 找不到使用者
 

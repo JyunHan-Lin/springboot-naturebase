@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title text-success">恭喜！您已成功註冊。</h5>
-                        <a href="/login" class="btn btn-primary mt-3">回註冊頁</a>
+                        <a href="/login" class="btn btn-primary mt-3">回登入頁</a>
                     </div>
                 </div>
             </div>

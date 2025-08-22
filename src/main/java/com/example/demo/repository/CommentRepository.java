@@ -10,6 +10,6 @@ import com.example.demo.model.entity.Discuss;
 public interface CommentRepository extends JpaRepository<Comment, Integer> {
 
 	public List<Comment>findByDiscussOrderByCreatedTimeAsc(Discuss discuss);
-	public void deleteByDiscuss_DiscussId(Integer discussId);
+	public void deleteByDiscuss_id(Integer discussId);
 
 }

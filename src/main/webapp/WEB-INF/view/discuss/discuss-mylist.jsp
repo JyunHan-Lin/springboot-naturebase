@@ -41,7 +41,7 @@
 						<c:choose>
 							<c:when test="${not empty myDiscussList}">
 								<c:forEach var="discussDTO" items="${myDiscussList}">
-									<a href="/ornibase/discuss/${discussDTO.discussId}" 
+									<a href="/naturebase/discuss/${discussDTO.discussId}" 
 									   class="list-group-item list-group-item-action mb-1 p-2 d-flex align-items-center"> 
 										
 										<!-- 討論串左側圖片區 -->

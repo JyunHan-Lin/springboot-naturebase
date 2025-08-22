@@ -60,12 +60,12 @@
 								<td>${behaviorDTO.note}</td>
 								<td>${behaviorDTO.formattedCreatedTime}</td>
 								<td>
-									<a href="/ornibase/discuss/behavior/${behaviorDTO.discussId}/edit/${behaviorDTO.behaviorId}" 
+									<a href="/naturebase/discuss/behavior/${behaviorDTO.discussId}/edit/${behaviorDTO.behaviorId}" 
 									   class="btn btn-sm btn-warning">編輯</a>
 								</td>
 								<td>
 									<form method="post" 
-									      action="/ornibase/discuss/behavior/${behaviorDTO.discussId}/delete/${behaviorDTO.behaviorId}" 
+									      action="/naturebase/discuss/behavior/${behaviorDTO.discussId}/delete/${behaviorDTO.behaviorId}" 
 									      onsubmit="return confirmDelete();">
 										<input type="hidden" name="_method" value="DELETE" />
 										<button type="submit" class="btn btn-sm btn-danger">刪除</button>
@@ -90,8 +90,5 @@
 			});
 		});
 	</script>
-
-	<!-- Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

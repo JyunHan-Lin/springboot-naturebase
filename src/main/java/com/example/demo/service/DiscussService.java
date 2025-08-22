@@ -7,16 +7,17 @@ import java.util.Optional;
 
 import com.example.demo.model.dto.DiscussDTO;
 import com.example.demo.model.entity.Discuss;
+import com.example.demo.model.entity.Tag;
 
 public interface DiscussService {
 	
 	public DiscussDTO createDiscuss(DiscussDTO discussDTO);
 	public List<DiscussDTO>getAllDiscuss();
-	public Optional<DiscussDTO> getDiscussById(Integer discussId);
-	public Optional<Discuss> getDiscussEntityById(Integer discussId);
+	public Optional<DiscussDTO> getDiscussById(Integer id);
+	public Optional<Discuss> getDiscussEntityById(Integer id);
 	public List<DiscussDTO> getDiscussByUserId(Integer id);
 	public void updateDiscuss(Integer discussId, Integer userId, DiscussDTO discussDTO);
-	public void updateDiscuss(Integer discussId, String title, String description, String tag, String youtubeVideoId, Boolean isPublic, LocalDateTime createdTime, Integer userId, String creatorName);
+	public void updateDiscuss(Integer id, String title, String description, String tag, String youtubeVideoId, Boolean isPublic, LocalDateTime createdTime, Integer userId, String creatorName, Tag tagName);
 	public void deleteDiscuss(Integer discussId, Integer userId, DiscussDTO discussDTO);
 	public boolean hasUserFavorited(Integer userId, Integer discussId);
 	public void addFavorite(Integer userId, Integer discussId);

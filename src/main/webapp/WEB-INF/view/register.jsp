@@ -21,8 +21,8 @@
 					<div class="card-body">
 						<form method="POST" action="/register">
 							<div class="mb-3">
-								<label for="username" class="form-label">帳號</label>
-								<input type="text" class="form-control" id="username" name="username" placeholder="請輸入4位數以上帳號名稱" required>
+								<label for="userName" class="form-label">帳號</label>
+								<input type="text" class="form-control" id="userName" name="userName" placeholder="請輸入4位數以上帳號名稱" required>
 							</div>
 							<div class="mb-3">
 								<label for="password" class="form-label">密碼</label>

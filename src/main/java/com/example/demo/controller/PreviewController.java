@@ -38,8 +38,8 @@ public class PreviewController {
 	    // 用 discussId 拿行為筆數
 	    Map<Integer, Integer> behaviorCountMap = new HashMap<>();
 	    for (DiscussDTO discuss : discussList) {
-	        int count = behaviorService.countByDiscussId(discuss.getDiscussId());
-	        behaviorCountMap.put(discuss.getDiscussId(), count);
+	        int count = behaviorService.countByDiscussId(discuss.getId());
+	        behaviorCountMap.put(discuss.getId(), count);
 	    }
 	    
 	    Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();
@@ -55,8 +55,8 @@ public class PreviewController {
         
         Map<Integer, Integer> behaviorCountMap = new HashMap<>();
         for (DiscussDTO discuss : discussList) {
-            int count = behaviorService.countByDiscussId(discuss.getDiscussId());
-            behaviorCountMap.put(discuss.getDiscussId(), count);
+            int count = behaviorService.countByDiscussId(discuss.getId());
+            behaviorCountMap.put(discuss.getId(), count);
         }
         
 	    Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();

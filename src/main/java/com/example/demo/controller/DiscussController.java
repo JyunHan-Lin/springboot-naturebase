@@ -48,12 +48,12 @@ public class DiscussController {
 	    // 用 Map 儲存討論串ID對應的行為數
 	    Map<Integer, Integer> behaviorCountMap = new HashMap<>();
 	    for (DiscussDTO discuss : myDiscussList) {
-	        int count = behaviorService.countByDiscussId(discuss.getDiscussId());
-	        behaviorCountMap.put(discuss.getDiscussId(), count);
+	        int count = behaviorService.countByDiscussId(discuss.getId());
+	        behaviorCountMap.put(discuss.getId(), count);
 	    }
 	    for (DiscussDTO discuss : favoriteDiscussList) {
-	        int count = behaviorService.countByDiscussId(discuss.getDiscussId());
-	        behaviorCountMap.put(discuss.getDiscussId(), count);
+	        int count = behaviorService.countByDiscussId(discuss.getId());
+	        behaviorCountMap.put(discuss.getId(), count);
 	    }
 	    
 	    Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();
@@ -81,7 +81,7 @@ public class DiscussController {
 	    System.out.println("收到 DiscussDTO.isPublic = " + discussDTO.getIsPublic());
 
 		DiscussDTO savedDiscuss = discussService.createDiscuss(discussDTO);
-	    return "redirect:/ornibase/discuss/" + savedDiscuss.getDiscussId();
+	    return "redirect:/ornibase/discuss/" + savedDiscuss.getId();
 	}
 	
 	// 編輯筆記本(標題、描述、網址: 點選到裡面再編輯) 

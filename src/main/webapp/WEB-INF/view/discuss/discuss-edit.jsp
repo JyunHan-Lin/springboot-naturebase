@@ -17,7 +17,7 @@
           <div class="card-body">
             <h2 class="card-title mb-3">編輯群組</h2>
 
-            <sp:form method="post" modelAttribute="discussDTO" action="/ornibase/discuss/update/${discussDTO.discussId}">
+            <sp:form method="post" modelAttribute="discussDTO" action="/naturebase/discuss/update/${discussDTO.discussId}">
               <input type="hidden" name="_method" value="PUT" />
 
               <div class="mb-3">

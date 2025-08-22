@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top fontstyle">
     <div class="container-fluid">
         <!-- Logo -->
-        <a class="navbar-brand" href="/ornibase">
+        <a class="navbar-brand" href="/naturebase">
             <img src="/images/logo-white.png" height="40" alt="Logo">
         </a>
 
@@ -25,10 +25,10 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link emphasis" href="/ornibase/discuss/new">建立群組</a>
+                    <a class="nav-link emphasis" href="/naturebase/discuss/new">建立群組</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link emphasis" href="/ornibase/manager">用戶管理</a>
+                    <a class="nav-link emphasis" href="/naturebase/manager">用戶管理</a>
                 </li>
             </ul>
 
@@ -40,9 +40,9 @@
                     <%= firstLetter %>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-	                <li><a class="dropdown-item" href="/ornibase/discuss/list">我的群組</a></li>
-                    <li><a class="dropdown-item" href="/ornibase/member">會員資料變更</a></li>
-                    <li><a class="dropdown-item" href="/ornibase/logout">登出</a></li>
+	                <li><a class="dropdown-item" href="/naturebase/discuss/list">我的群組</a></li>
+                    <li><a class="dropdown-item" href="/naturebase/member">會員資料變更</a></li>
+                    <li><a class="dropdown-item" href="/naturebase/logout">登出</a></li>
                 </ul>
 
 	        

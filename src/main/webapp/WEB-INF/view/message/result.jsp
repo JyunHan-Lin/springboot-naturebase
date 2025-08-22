@@ -20,7 +20,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${resultMessage}</h5>
-                        <a href="/ornibase" class="btn btn-primary mt-3">回到首頁</a>
+                        <a href="/naturebase" class="btn btn-primary mt-3">回到首頁</a>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ public class EmailServiceImpl implements EmailService{
     	* 	SMTP(Simple Mail Transfer Protocol（簡單郵件傳輸協定）一種電子郵件傳送的標準通訊協定(用在寄信))
     	*	我們自己(客戶端)寫信發送 -> SMTP (mail.google.com) -> Gmail的伺服器 -> 收件者的伺服器
     	**/
-		String from = emailConfig.getUsername();
+		String from = emailConfig.getUserName();
     	String password = emailConfig.getPassword();
 		// 使用 Gmail SMTP 伺服器
 		String host = "smtp.gmail.com";

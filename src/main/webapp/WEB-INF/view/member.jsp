@@ -18,7 +18,7 @@
 	<%@ include file="/WEB-INF/view/navbar-login.jspf"%>
 
     <div class="container mt-5">
-        <form method="POST" action="/ornibase/member" class="card shadow p-4">
+        <form method="POST" action="/naturebase/member" class="card shadow p-4">
             <fieldset>
                 <legend class="h3 mb-4 text-primary">會員資料變更</legend>
 

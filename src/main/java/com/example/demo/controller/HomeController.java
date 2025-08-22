@@ -40,8 +40,8 @@ public class HomeController {
 	    // 用 discussId 拿行為筆數
 	    Map<Integer, Integer> behaviorCountMap = new HashMap<>();
 	    for (DiscussDTO discuss : discussList) {
-	        int count = behaviorService.countByDiscussId(discuss.getDiscussId());
-	        behaviorCountMap.put(discuss.getDiscussId(), count);
+	        int count = behaviorService.countByDiscussId(discuss.getId());
+	        behaviorCountMap.put(discuss.getId(), count);
 	    }
 	    // 假設在 Controller
 	    // 取得目前登入使用者 ID
@@ -50,7 +50,7 @@ public class HomeController {
 	    // 取得使用者收藏的討論串 ID 清單
 	    List<DiscussDTO> favoriteDiscusses = discussService.getMyFavoritePublicDiscuss(userId);
 	    Set<Integer> favoriteDiscussIds = favoriteDiscusses.stream()
-	                                         .map(DiscussDTO::getDiscussId)
+	                                         .map(DiscussDTO::getId)
 	                                         .collect(Collectors.toSet());
 	    
 	    UserCert userCert = (UserCert) session.getAttribute("userCert");
@@ -72,14 +72,14 @@ public class HomeController {
         
         Map<Integer, Integer> behaviorCountMap = new HashMap<>();
         for (DiscussDTO discuss : discussList) {
-            int count = behaviorService.countByDiscussId(discuss.getDiscussId());
-            behaviorCountMap.put(discuss.getDiscussId(), count);
+            int count = behaviorService.countByDiscussId(discuss.getId());
+            behaviorCountMap.put(discuss.getId(), count);
         }
         // 顯示收藏人數
         Integer userId = (Integer) session.getAttribute("userId");
         List<DiscussDTO> favoriteDiscusses = discussService.getMyFavoritePublicDiscuss(userId);
         Set<Integer> favoriteDiscussIds = favoriteDiscusses.stream()
-                                         .map(DiscussDTO::getDiscussId)
+                                         .map(DiscussDTO::getId)
                                          .collect(Collectors.toSet());
 
         Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();

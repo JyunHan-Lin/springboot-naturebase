@@ -1,3 +1,4 @@
+// MemberController
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,10 +38,10 @@ public class MemberController {
     	// 從 session 取得登入者資訊
         UserCert userCert = (UserCert) session.getAttribute("userCert");
         // 取得登入者 email
-        String username = userCert.getUsername();
+        String userName = userCert.getUsername();
         
         try {
-            boolean result = userService.changePassword(username, oldPassword, newPassword, confirmPassword);
+            boolean result = userService.changePassword(userName, oldPassword, newPassword, confirmPassword);
 
             if (result) {
                 model.addAttribute("resultMessage", "密碼變更成功！");

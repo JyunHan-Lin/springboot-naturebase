@@ -66,15 +66,7 @@ public class BehaviorServiceImpl implements BehaviorService{
 	        behaviorRepository.save(behavior);
         }
     }
-    
-	// 查詢userId、disscussId 建立的行為(只看得到自己建立的行為)
-//	@Override
-//	public List<BehaviorDTO> getBehaviorsByDiscussAndUser(Integer discussId, Integer userId) {
-//        return behaviorRepository.findByDiscussIdAndUserId(discussId, userId)
-//                                 .stream()
-//                        		 .map(behaviorMapper::toDTO)
-//        	            		 .toList();
-//    }
+
 	// 查詢userId、disscussId 建立的行為(只看得到自己建立的行為)
 	@Override
 	public List<BehaviorDTO> getBehaviorByDiscussId(Integer discussId) {

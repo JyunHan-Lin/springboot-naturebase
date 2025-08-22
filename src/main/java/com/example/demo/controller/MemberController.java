@@ -16,7 +16,7 @@ import com.example.demo.service.UserService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/ornibase/member")
+@RequestMapping("/naturebase/member")
 public class MemberController {
 	
 	@Autowired

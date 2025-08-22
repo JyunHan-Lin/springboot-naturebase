@@ -10,8 +10,6 @@ import com.example.demo.model.dto.BehaviorDTO;
 
 public interface BehaviorService {
 	public void saveBehavior(Integer discussId, Integer userId, BehaviorDTO behaviorDTO);
-//	public List<BehaviorDTO> getAllBehavior();
-//	public List<BehaviorDTO> getBehaviorsByDiscussAndUser(Integer discussId, Integer userId);
 	public List<BehaviorDTO> getBehaviorByDiscussId(Integer discussId);
 	public Optional<BehaviorDTO> getBehaviorById(Integer behaviorId);
 	public void updateBehavior(Integer behaviorId, BehaviorDTO behaviorDTO);

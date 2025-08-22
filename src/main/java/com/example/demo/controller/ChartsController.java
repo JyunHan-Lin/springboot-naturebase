@@ -29,7 +29,7 @@ import com.example.demo.service.DiscussService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/ornibase/discuss")
+@RequestMapping("/naturebase/discuss")
 public class ChartsController {
 
 	@Autowired

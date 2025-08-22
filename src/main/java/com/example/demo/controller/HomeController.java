@@ -22,7 +22,7 @@ import com.example.demo.service.UserService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/ornibase")
+@RequestMapping("/naturebase")
 public class HomeController {
 
 	@Autowired

@@ -64,10 +64,9 @@
 											</span>
 											<span class="text-muted mt-auto" style="font-size: 0.875rem" >
 													分類： 
-													版主： 
+													建立者： 
 													文章：
 													紀錄：${behaviorCountMap[discussDTO.discussId]} 
-													人氣：
 													人數：${favoriteCountMap[discussDTO.discussId]}
 											</span>
 										</span>
@@ -75,7 +74,7 @@
 								</c:forEach>
 							</c:when>
 							<c:otherwise>
-								<p class="text-muted">目前尚無群組，請先建立一個。</p>
+								<p class="text-muted">目前尚無討論串，請先建立一個。</p>
 							</c:otherwise>
 						</c:choose>
 					</div>

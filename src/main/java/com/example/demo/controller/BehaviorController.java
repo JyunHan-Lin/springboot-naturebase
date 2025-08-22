@@ -31,7 +31,7 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller
-@RequestMapping("/ornibase/discuss/behavior")
+@RequestMapping("/naturebase/discuss/behavior")
 public class BehaviorController {
 	
 	@Autowired

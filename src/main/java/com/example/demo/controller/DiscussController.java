@@ -28,7 +28,7 @@ import jakarta.validation.Valid;
 
 
 @Controller
-@RequestMapping("/ornibase/discuss")
+@RequestMapping("/naturebase/discuss")
 public class DiscussController {
 	
 	@Autowired

@@ -1,5 +1,5 @@
 var stompClient = null;
-    var roomId = '${discussDTO.discussId}';  // 動態聊天室Id
+    var roomId = '${discussDTO.id}';  // 動態聊天室Id
 
     function escapeHtml(text) {
         var div = document.createElement('div');

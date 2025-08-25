@@ -3,15 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="/css/basic.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <title>OrniBase</title>
-    <link rel="icon" type="image/png" href="/images/icon.png">
+	<%@ include file="/WEB-INF/view/common.jspf"%>
     <script src="/js/member.js"></script>
 </head>
 <body class="fontstyle">

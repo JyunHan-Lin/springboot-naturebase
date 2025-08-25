@@ -18,7 +18,7 @@
 			</div>
 			<div class="card-body">
 				<sp:form method="post" modelAttribute="behaviorDTO"
-					action="/naturebase/discuss/behavior/${behaviorDTO.discussId}/edit/${behaviorDTO.behaviorId}">
+					action="/naturebase/discuss/behavior/${behaviorDTO.id}/edit/${behaviorDTO.id}">
 					<input type="hidden" name="_method" value="PUT" />
 
 					<div class="mb-3 row">
@@ -111,7 +111,7 @@
 
 					<div class="d-flex justify-content-between mt-4">
 						<button type="submit" class="btn btn-primary">送出</button>
-						<a href="/nature/discuss/behavior/${discussDTO.discussId}/list" class="btn btn-outline-secondary">查看紀錄清單</a>
+						<a href="/nature/discuss/behavior/${discussDTO.id}/list" class="btn btn-outline-secondary">查看紀錄清單</a>
 					</div>
 
 				</sp:form>

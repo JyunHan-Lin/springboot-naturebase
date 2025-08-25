@@ -41,7 +41,7 @@
 						<c:choose>
 							<c:when test="${not empty myDiscussList}">
 								<c:forEach var="discussDTO" items="${myDiscussList}">
-									<a href="/naturebase/discuss/${discussDTO.discussId}" 
+									<a href="/naturebase/discuss/${discussDTO.id}" 
 									   class="list-group-item list-group-item-action mb-1 p-2 d-flex align-items-center"> 
 										
 										<!-- 討論串左側圖片區 -->
@@ -59,9 +59,9 @@
 													分類： 
 													版主： 
 													文章：
-													紀錄：${behaviorCountMap[discussDTO.discussId]} 
+													紀錄：${behaviorCountMap[discussDTO.id]} 
 													人氣：
-													人數：${favoriteCountMap[discussDTO.discussId]}
+													人數：${favoriteCountMap[discussDTO.id]}
 											</span>
 										</span>
 									</a>
@@ -81,7 +81,7 @@
 						<c:choose>
 							<c:when test="${not empty favoriteDiscussList}">
 								<c:forEach var="discussDTO" items="${favoriteDiscussList}">
-									<a href="/ornibase/discuss/${discussDTO.discussId}" 
+									<a href="/naturebase/discuss/${discussDTO.id}" 
 									   class="list-group-item list-group-item-action mb-1 p-2 d-flex align-items-center"> 
 										
 										<!-- 討論串左側圖片區 -->
@@ -99,9 +99,9 @@
 													分類： 
 													版主： 
 													文章：
-													紀錄：${behaviorCountMap[discussDTO.discussId]} 
+													紀錄：${behaviorCountMap[discussDTO.id]} 
 													人氣：
-													人數：${favoriteCountMap[discussDTO.discussId]}
+													人數：${favoriteCountMap[discussDTO.id]}
 											</span>
 										</span>
 									</a>

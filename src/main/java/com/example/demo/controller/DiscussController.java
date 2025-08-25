@@ -81,7 +81,7 @@ public class DiscussController {
 	    System.out.println("收到 DiscussDTO.isPublic = " + discussDTO.getIsPublic());
 
 		DiscussDTO savedDiscuss = discussService.createDiscuss(discussDTO);
-	    return "redirect:/ornibase/discuss/" + savedDiscuss.getId();
+	    return "redirect:/naturebase/discuss/" + savedDiscuss.getId();
 	}
 	
 	// 編輯筆記本(標題、描述、網址: 點選到裡面再編輯) 
@@ -99,7 +99,7 @@ public class DiscussController {
 	    Integer userId = userCert.getUserId();
 		// 進行修改
 		discussService.updateDiscuss(discussId, userId, discussDTO);
-		return "redirect:/ornibase/discuss/" + discussId;
+		return "redirect:/naturebase/discuss/" + discussId;
 	}
 
 	
@@ -109,7 +109,7 @@ public class DiscussController {
 	    UserCert userCert = (UserCert) session.getAttribute("userCert");
 	    Integer userId = userCert.getUserId();
 		discussService.deleteDiscuss(discussId, userId, discussDTO);
-		return "redirect:/ornibase/discuss/list"; // 重導到個人書架
+		return "redirect:/naturebase/discuss/list"; // 重導到個人書架
 	}
 	
 	@PostMapping("/favorite/{discussId}")
@@ -119,7 +119,7 @@ public class DiscussController {
 	        throw new RuntimeException("請先登入以收藏");
 	    }
 	    discussService.addFavorite(userCert.getUserId(), discussId);
-	    return "redirect:/ornibase/discuss/" + discussId;
+	    return "redirect:/naturebase/discuss/" + discussId;
 	}
 
 	@PostMapping("/favorite/{discussId}/delete")
@@ -129,6 +129,6 @@ public class DiscussController {
 	        throw new RuntimeException("請先登入以收藏");
 	    }
 	    discussService.removeFavorite(userCert.getUserId(), discussId);
-	    return "redirect:/ornibase";
+	    return "redirect:/naturebase";
 	}
 }

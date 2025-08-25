@@ -53,7 +53,7 @@
 						<c:choose>
 							<c:when test="${not empty discussList}">
 								<c:forEach var="discussDTO" items="${discussList}">
-									<a href="/ornibase/discuss/${discussDTO.discussId}" 
+									<a href="/naturebase/discuss/${discussDTO.id}" 
 									   class="list-group-item list-group-item-action mb-1 p-2 d-flex align-items-center"> 
 										
 										<!-- 討論串左側圖片區 -->
@@ -71,9 +71,9 @@
 													分類： 
 													版主： 
 													文章：
-													紀錄：${behaviorCountMap[discussDTO.discussId]} 
+													紀錄：${behaviorCountMap[discussDTO.id]} 
 													人氣：
-													人數：${favoriteCountMap[discussDTO.discussId]}
+													人數：${favoriteCountMap[discussDTO.id]}
 											</span>
 										</span>
 									</a>
@@ -89,7 +89,7 @@
 			<!-- 右側分區 -->
 			<div class="col-md-4">
 			    <!-- 搜尋 -->
-			    <form class="d-flex mb-2" method="get" action="/ornibase/search">
+			    <form class="d-flex mb-2" method="get" action="/naturebase/search">
                		<input type="text" name="keyword" class="form-control me-2" placeholder="輸入關鍵字...">
                		<button type="submit" class="btn btn-primary">
 						<i class="fa-solid fa-magnifying-glass"></i>

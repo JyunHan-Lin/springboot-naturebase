@@ -14,7 +14,7 @@
 		</div>
 		<div class="card-body">
 			<sp:form id="behaviorForm" method="post" modelAttribute="behaviorDTO"
-				action="/ornibase/discuss/behavior/${discussDTO.discussId}">
+				action="/naturebase/discuss/behavior/${discussDTO.id}">
 
 				<!-- 日期 -->
 				<div class="mb-3 row">
@@ -114,7 +114,7 @@
 				<!-- 按鈕 -->
 				<div class="d-flex justify-content-between">
 					<button type="submit" class="btn btn-primary">送出</button>
-					<a href="/ornibase/discuss/behavior/${discussDTO.discussId}/list"
+					<a href="/naturebase/discuss/behavior/${discussDTO.id}/list"
 						class="btn btn-outline-secondary"> 查看紀錄清單 <c:if
 							test="${not empty behaviorList}">
 							<span class="badge bg-secondary">${fn:length(behaviorList)}</span>

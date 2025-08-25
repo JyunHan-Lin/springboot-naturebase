@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
       behaviorForm.reset();  // 清空表單
       // 更新行為清單或圖表
 	  loadTimelineData();
-	  drawFoodChart();
     })
     .catch(err => alert("送出失敗：" + err));
   });

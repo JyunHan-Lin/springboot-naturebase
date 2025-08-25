@@ -16,7 +16,7 @@ function loadTimelineData() {
 	}
 	const discussId = document.getElementById("timeline-chart").dataset.discussId;
 
-	fetch(`/ornibase/discuss/chart-timeline?discussId=${discussId}`)
+	fetch(`/naturebase/discuss/chart-timeline?discussId=${discussId}`)
 		.then(res => res.json())
 		.then(data => drawTimeline(data))
 		.catch(err => console.error("圖表載入失敗", err));

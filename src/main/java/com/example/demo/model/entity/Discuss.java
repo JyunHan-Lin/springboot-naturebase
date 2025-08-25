@@ -17,17 +17,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
-Entity name: Discuss
-Table name: discuss
-+------------+--------+-------------+--------+---------------------+--------------+
-| discuss_id | title  | description |	tag	 |  youtube_video_id   | created_time | 
-+------------+--------+-------------+--------+---------------------+--------------+
-|     1      |  ..    |   ........  |   ...  |      ...........    |  ..........  |
-|     2      |  ...   |   ........  |   ...  |      ...........    |  ..........  |
-+------------+--------+-------------+--------+---------------------+--------------+
-*/
-
 @Entity
 @Data
 @AllArgsConstructor

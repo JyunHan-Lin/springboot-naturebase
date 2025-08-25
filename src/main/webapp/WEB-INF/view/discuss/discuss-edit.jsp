@@ -17,7 +17,7 @@
           <div class="card-body">
             <h2 class="card-title mb-3">編輯群組</h2>
 
-            <sp:form method="post" modelAttribute="discussDTO" action="/naturebase/discuss/update/${discussDTO.discussId}">
+            <sp:form method="post" modelAttribute="discussDTO" action="/naturebase/discuss/update/${discussDTO.id}">
               <input type="hidden" name="_method" value="PUT" />
 
               <div class="mb-3">
@@ -29,7 +29,7 @@
                 <label class="form-label">影片描述 <span class="text-danger">*</span></label>
                 <sp:input type="text" path="description" placeholder="請描述內容" class="form-control" required="required"/>
               </div>
-
+<!-- 
               <div class="mb-3">
                 <label class="form-label">標籤</label>
                 <sp:select path="tag" class="form-select" required="required">
@@ -44,6 +44,7 @@
                   <sp:option value="蜂鳥" />
                 </sp:select>
               </div>
+ -->
 
               <div class="mb-3">
                 <label class="form-label">Youtube 連結</label>

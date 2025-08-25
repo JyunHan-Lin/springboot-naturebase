@@ -128,7 +128,7 @@ public class DiscussServiceImpl implements DiscussService{
 
 	// 更新討論串
 	@Override
-	public void updateDiscuss(Integer discussId, String title, String description, String tag, String youtubeVideoId, Boolean isPublic, LocalDateTime createdTime, Integer userId, String creatorName, Tag tagName) {
+	public void updateDiscuss(Integer discussId, String title, String description, String youtubeVideoId, Boolean isPublic, LocalDateTime createdTime, Integer userId, String creatorName) {
 		DiscussDTO discussDTO = new DiscussDTO(discussId, title, description, youtubeVideoId, isPublic, createdTime, userId, creatorName);
 		updateDiscuss(discussId, userId, discussDTO);		
 	}

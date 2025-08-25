@@ -79,8 +79,8 @@ public class HomeController {
         Integer userId = (Integer) session.getAttribute("userId");
         List<DiscussDTO> favoriteDiscusses = discussService.getMyFavoritePublicDiscuss(userId);
         Set<Integer> favoriteDiscussIds = favoriteDiscusses.stream()
-                                         .map(DiscussDTO::getId)
-                                         .collect(Collectors.toSet());
+                                         				   .map(DiscussDTO::getId)
+                                         				   .collect(Collectors.toSet());
 
         Map<Integer, Integer> favoriteCountMap = discussService.getFavoriteCountMap();
         
@@ -89,7 +89,7 @@ public class HomeController {
         model.addAttribute("favoriteCountMap", favoriteCountMap);
         model.addAttribute("favoriteDiscussIds", favoriteDiscussIds);
         model.addAttribute("keyword", keyword);
-        return "main";  // JSP 頁面路徑，自己調整
+        return "main-page";  // JSP 頁面路徑，自己調整
     }
 	
 	// 登出

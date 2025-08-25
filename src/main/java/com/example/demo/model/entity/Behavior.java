@@ -16,17 +16,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
-Entity name: Behavior
-Table name: behavior
-+-------------+-------+------------+----------+---------+--------+-------------+------+--------------+
-| behavior_id | date  | start_time | end_time | subject | action | temperature | note | created_time |
-+-------------+-------+------------+----------+---------+--------+-------------+------+--------------+
-|      1      |       |   ........ | .....    | .....   |  ....  |    ......   | .... |    ........  | 
-|      2      |       |   .......  | .....    | .....   |  ....  |    ......   | .... |    ........  |
-+-------------+-------+------------+----------+---------+--------+-------------+------+--------------+
-*/
-
 @Entity
 @Data
 @AllArgsConstructor

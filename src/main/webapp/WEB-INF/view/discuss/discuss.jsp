@@ -9,7 +9,7 @@
 	<!-- 從 Google 的 CDN 載入 Google Charts 套件, 引入 Google Charts-->
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script src="/js/charts.js" defer></script>
-	<script src="/js/ajax.js"></script>
+	<script src="/js/ajax.js" defer></script>
 	<script src="/js/discuss-delete.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
@@ -36,7 +36,6 @@
 								</div>
 								<div>
 									<h4 class="mb-1">${discussDTO.title}</h4>
-									<span class="badge bg-secondary">${discussDTO.tag}</span> 
 									<span class="badge bg-primary">${discussDTO.isPublic ? '公開' : '私人'}</span>
 								</div>
 							</div>
@@ -44,10 +43,10 @@
 							<div class="btn-group">
 								<c:choose>
 									<c:when test="${privilegeLevel == 3}">
-										<a href="/ornibase/discuss/update/${discussDTO.discussId}" class="btn btn-warning mx-1">編輯</a>
+										<a href="/naturebase/discuss/update/${discussDTO.id}" class="btn btn-warning mx-1">編輯</a>
 										<form 
 											method="post"
-											action="/naturebase/discuss/delete/${discussDTO.discussId}"
+											action="/naturebase/discuss/delete/${discussDTO.id}"
 											class="d-inline">
 											<input type="hidden" name="_method" value="DELETE" />
 											<button type="submit" class="btn btn-danger" onclick="return confirmDelete();">刪除</button>
@@ -55,13 +54,13 @@
 									</c:when>
 									<c:when test="${privilegeLevel == 2}">
 										<form method="post"
-											action="/naturebase/discuss/favorite/${discussDTO.discussId}/delete">
+											action="/naturebase/discuss/favorite/${discussDTO.id}/delete">
 											<button type="submit" class="btn btn-danger">取消追蹤</button>
 										</form>
 									</c:when>
 									<c:otherwise>
 										<p>若想記錄行為或留言，請先追蹤</p>
-										<form method="post" action="/naturebase/discuss/favorite/${discussDTO.discussId}">
+										<form method="post" action="/naturebase/discuss/favorite/${discussDTO.id}">
 											<button type="submit" class="btn btn-danger">追蹤</button>
 										</form>
 									</c:otherwise>
@@ -83,7 +82,7 @@
 						<div class="row">
 							<div class="col-md-12 mb-3">
 								<h6>當日行為時間軸</h6>
-								<div id="timeline-chart" data-discuss-id="${discussDTO.discussId}" style="height: 180px;"></div>
+								<div id="timeline-chart" data-discuss-id="${discussDTO.id}" style="height: 180px;"></div>
 							</div>
 						</div>
 						

@@ -36,7 +36,7 @@ public class User {
 	@Column(name = "salt", nullable = false) // 不寫 length 預設為255 
 	private String salt;
 	
-	@Column(name = "email", nullable = false, unique = true) 
+	@Column(name = "email", nullable = false) 
 	private String email;
 	
 	@Column(name = "active", nullable = false)

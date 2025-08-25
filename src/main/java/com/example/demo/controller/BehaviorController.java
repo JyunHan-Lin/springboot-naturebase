@@ -86,7 +86,7 @@ public class BehaviorController {
 			UserCert userCert = (UserCert) session.getAttribute("userCert");
 			behaviorDTO.setUserId(userCert.getUserId());  // 為了驗證
 			behaviorService.updateBehavior(behaviorId, behaviorDTO);
-			return "redirect:/ornibase/discuss/behavior/" + discussId + "/list";
+			return "redirect:/naturebase/discuss/behavior/" + discussId + "/list";
 			
 		} catch (BehaviorException e) {
 			model.addAttribute("message", e.getMessage());
@@ -105,7 +105,7 @@ public class BehaviorController {
 		try {
 			UserCert userCert = (UserCert) session.getAttribute("userCert");
 			behaviorService.deleteBehavior(behaviorId, userCert.getUserId());
-			return "redirect:/ornibase/discuss/behavior/" + discussId + "/list"; 			
+			return "redirect:/naturebase/discuss/behavior/" + discussId + "/list"; 			
 		} catch (BehaviorException e) {
 			model.addAttribute("message", e.getMessage());
 			return "/message/error";

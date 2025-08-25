@@ -43,7 +43,7 @@
 				</c:if>
 			</c:forEach>
 			<form method="post"
-				action="/ornibase/discuss/${discussDTO.discussId}/comment">
+				action="/naturebase/discuss/${discussDTO.id}/comment">
 				<textarea name="content" class="form-control mb-2" rows="3"
 					maxlength="100" placeholder="撰寫新留言..." required></textarea>
 				<button type="submit" class="btn btn-success">送出留言</button>

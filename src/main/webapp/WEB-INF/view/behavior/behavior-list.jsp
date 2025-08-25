@@ -60,12 +60,12 @@
 								<td>${behaviorDTO.note}</td>
 								<td>${behaviorDTO.formattedCreatedTime}</td>
 								<td>
-									<a href="/naturebase/discuss/behavior/${behaviorDTO.discussId}/edit/${behaviorDTO.behaviorId}" 
+									<a href="/naturebase/discuss/behavior/${behaviorDTO.discussId}/edit/${behaviorDTO.id}" 
 									   class="btn btn-sm btn-warning">編輯</a>
 								</td>
 								<td>
 									<form method="post" 
-									      action="/naturebase/discuss/behavior/${behaviorDTO.discussId}/delete/${behaviorDTO.behaviorId}" 
+									      action="/naturebase/discuss/behavior/${behaviorDTO.discussId}/delete/${behaviorDTO.id}" 
 									      onsubmit="return confirmDelete();">
 										<input type="hidden" name="_method" value="DELETE" />
 										<button type="submit" class="btn btn-sm btn-danger">刪除</button>
